@@ -1,0 +1,27 @@
+{
+  "count": 10,
+  "total": 178.14,
+  "categories": [
+    "acessorios",
+    "colecionaveis",
+    "livros",
+    "vestuario"
+  ],
+  "top3": [
+    {
+      "id": 2,
+      "name": "Sweatshirt com capuz",
+      "price": 32.5
+    },
+    {
+      "id": 7,
+      "name": "Miniatura autotanque 1:43",
+      "price": 29.99
+    },
+    {
+      "id": 8,
+      "name": "Miniatura ambulância 1:43",
+      "price": 27.5
+    }
+  ]
+}

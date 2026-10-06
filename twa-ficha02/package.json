@@ -1,0 +1,19 @@
+{
+  "name": "twa-ficha02",
+  "version": "1.0.0",
+  "description": "TWA · Ficha 02 — módulo de catálogo (loja AHBVV)",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "check": "node check.js",
+    "report": "node app.js report",
+    "check:ts": "node --experimental-strip-types check-ts.ts"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [],
+  "author": "Francisco",
+  "license": "ISC"
+}
