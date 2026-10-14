@@ -1,0 +1,173 @@
+:root {
+  --bg: #f7f4ef;
+  --surface: #ffffff;
+  --ink: #1f1a17;
+  --muted: #6b625b;
+  --line: #e4ddd3;
+  --accent: #b3261e;
+  --accent-soft: #fbe9e7;
+  --ok: #2e6b3a;
+  --radius: 10px;
+  color-scheme: light dark;
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.45;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171412;
+    --surface: #221e1b;
+    --ink: #f2ede7;
+    --muted: #a99f96;
+    --line: #3a332e;
+    --accent: #ef6a5f;
+    --accent-soft: #3a201d;
+    --ok: #7fc28b;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.top, main {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.top { padding-top: 32px; padding-bottom: 8px; }
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h1 { margin: 4px 0 0; font-size: 2rem; letter-spacing: -0.02em; }
+
+/* ---------- controlos */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: end;
+  margin: 20px 0 8px;
+}
+
+.field { display: grid; gap: 4px; font-size: 0.85rem; color: var(--muted); }
+.field-search { flex: 1 1 260px; }
+
+input, select, button { font: inherit; color: inherit; }
+
+input, select {
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+input:focus-visible, select:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+button { cursor: pointer; }
+button:disabled, input:disabled, select:disabled { opacity: 0.55; cursor: not-allowed; }
+
+.sort, .retry {
+  height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.retry { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+
+/* ---------- estado */
+#status { min-height: 32px; }
+.msg, .count { margin: 8px 0; color: var(--muted); }
+.msg-error {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+.msg-error p { margin: 0; }
+
+/* ---------- lista + detalhe */
+.panes {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  padding-bottom: 48px;
+}
+
+@media (min-width: 760px) {
+  .panes { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); align-items: start; }
+  .detail { position: sticky; top: 16px; }
+}
+
+.list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+
+.item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "name price" "cat price";
+  gap: 2px 12px;
+  padding: 12px 14px;
+  text-align: left;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.item:hover { border-color: var(--muted); }
+.selected .item { border-color: var(--accent); box-shadow: inset 3px 0 0 var(--accent); }
+
+.item-name { grid-area: name; font-weight: 600; }
+.item-cat { grid-area: cat; font-size: 0.85rem; color: var(--muted); }
+.item-price { grid-area: price; align-self: center; font-variant-numeric: tabular-nums; font-weight: 600; }
+
+.detail {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.detail:empty { display: none; }
+.hint { margin: 0; color: var(--muted); }
+
+.detail-head { display: flex; justify-content: space-between; align-items: center; }
+.close { border: 0; background: none; color: var(--muted); padding: 4px 0; text-decoration: underline; }
+
+.detail h2 { margin: 6px 0 4px; font-size: 1.35rem; line-height: 1.25; }
+.detail-price { margin: 0; font-size: 1.6rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.stock { margin: 4px 0 16px; color: var(--ok); font-weight: 600; font-size: 0.9rem; }
+.stock-out { color: var(--accent); }
+
+dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; font-size: 0.92rem; }
+dt { color: var(--muted); }
+dd { margin: 0; }
+
+.tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.tags li {
+  padding: 1px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  font-size: 0.82rem;
+}
