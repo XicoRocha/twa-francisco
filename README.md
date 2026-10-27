@@ -4,4 +4,6 @@ Tecnologias Web Avançadas — ISLA Gaia 2026/27
 - `twa-ficha01/` — módulos ES, fetch à API do GitHub, escrita de repo.json
 - `twa-ficha02/` — módulo de catálogo com funções puras, `check.js`, `report.json`
 - `twa-ficha03/` — o catálogo no browser: Vite vanilla, `fetch` + `async`/`await`, `render(state)`
+- `twa-ficha04/` — o catálogo em Vue: `ref`, `computed`, template
+- `twa-ficha05/` — componentes (`ItemList`, `ItemDetail`, `ItemForm`), `defineProps`/`defineEmits`, composable `useLoad`
 - `twa-vite/` — projeto Vite vanilla, contador decrescente no título do separador

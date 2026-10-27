@@ -1,0 +1,52 @@
+/* style.css — só o global (variáveis, body, controlos); o resto está no <style scoped> de cada componente */
+:root {
+  --bg: #f7f4ef;
+  --surface: #ffffff;
+  --ink: #1f1a17;
+  --muted: #6b625b;
+  --line: #e4ddd3;
+  --accent: #b3261e;
+  --accent-soft: #fbe9e7;
+  --radius: 10px;
+  color-scheme: light dark;
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.45;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171412;
+    --surface: #221e1b;
+    --ink: #f2ede7;
+    --muted: #a99f96;
+    --line: #3a332e;
+    --accent: #ef6a5f;
+    --accent-soft: #3a201d;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+input, select, button { font: inherit; color: inherit; }
+
+input, select {
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+input:focus-visible, select:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+button { cursor: pointer; }
+button:disabled, input:disabled, select:disabled { opacity: 0.55; cursor: not-allowed; }
