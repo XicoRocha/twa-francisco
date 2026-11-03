@@ -6,4 +6,5 @@ Tecnologias Web Avançadas — ISLA Gaia 2026/27
 - `twa-ficha03/` — o catálogo no browser: Vite vanilla, `fetch` + `async`/`await`, `render(state)`
 - `twa-ficha04/` — o catálogo em Vue: `ref`, `computed`, template
 - `twa-ficha05/` — componentes (`ItemList`, `ItemDetail`, `ItemForm`), `defineProps`/`defineEmits`, composable `useLoad`
+- `twa-ficha06/` — Vue Router (um URL por ecrã), `store.js`, paginação da PokéAPI com `?page=`
 - `twa-vite/` — projeto Vite vanilla, contador decrescente no título do separador

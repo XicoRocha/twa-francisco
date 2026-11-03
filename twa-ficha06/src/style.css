@@ -1,0 +1,87 @@
+/* style.css — só o global: variáveis, body, controlos e as classes partilhadas pelas páginas */
+:root {
+  --bg: #f7f4ef;
+  --surface: #ffffff;
+  --ink: #1f1a17;
+  --muted: #6b625b;
+  --line: #e4ddd3;
+  --accent: #b3261e;
+  --accent-soft: #fbe9e7;
+  --radius: 10px;
+  color-scheme: light dark;
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.45;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171412;
+    --surface: #221e1b;
+    --ink: #f2ede7;
+    --muted: #a99f96;
+    --line: #3a332e;
+    --accent: #ef6a5f;
+    --accent-soft: #3a201d;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+input, select, button { font: inherit; color: inherit; }
+
+input, select {
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+input:focus-visible, select:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+button { cursor: pointer; }
+button:disabled, input:disabled, select:disabled { opacity: 0.55; cursor: not-allowed; }
+
+/* ---------- partilhado pelas páginas (mensagens de estado e botões) */
+.page-title { margin: 0 0 4px; font-size: 1.5rem; letter-spacing: -0.01em; }
+
+.msg { margin: 8px 0; color: var(--muted); }
+.msg-error {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+.msg-error p { margin: 0; }
+
+.btn {
+  height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+
+.back {
+  display: inline-block;
+  margin: 4px 0 16px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.92rem;
+}
+.back:hover { color: var(--accent); }
