@@ -1,0 +1,144 @@
+[
+  {
+    "id": 1,
+    "name": "T-shirt Bombeiros Valadares",
+    "category": "vestuario",
+    "price": 15,
+    "tags": [
+      "algodao",
+      "oficial",
+      "unissexo"
+    ],
+    "supplier": {
+      "name": "Têxteis Gaia",
+      "country": "PT"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Sweatshirt com capuz",
+    "category": "vestuario",
+    "price": 32.5,
+    "tags": [
+      "inverno",
+      "oficial"
+    ],
+    "supplier": {
+      "name": "Têxteis Gaia",
+      "country": "PT"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Boné bordado",
+    "category": "vestuario",
+    "price": 12,
+    "tags": [
+      "verao",
+      "bordado"
+    ],
+    "supplier": {
+      "name": "Bordados do Norte",
+      "country": "PT"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Caneca esmaltada",
+    "category": "acessorios",
+    "price": 9.9,
+    "tags": [
+      "cozinha",
+      "oferta"
+    ],
+    "supplier": {
+      "name": "Esmaltes Ibéricos",
+      "country": "ES"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Porta-chaves capacete",
+    "category": "acessorios",
+    "price": 4.5,
+    "tags": [
+      "oferta",
+      "metal"
+    ],
+    "supplier": {
+      "name": "Metalúrgica Porto",
+      "country": "PT"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Garrafa térmica",
+    "category": "acessorios",
+    "price": 18.75,
+    "tags": [
+      "inox",
+      "desporto"
+    ],
+    "supplier": {
+      "name": "Thermo GmbH",
+      "country": "DE"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Miniatura autotanque 1:43",
+    "category": "colecionaveis",
+    "price": 29.99,
+    "tags": [
+      "viatura",
+      "miniatura",
+      "metal"
+    ],
+    "supplier": {
+      "name": "Mini Veículos",
+      "country": "IT"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Miniatura ambulância 1:43",
+    "category": "colecionaveis",
+    "price": 27.5,
+    "tags": [
+      "viatura",
+      "miniatura"
+    ],
+    "supplier": {
+      "name": "Mini Veículos",
+      "country": "IT"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Emblema bordado",
+    "category": "colecionaveis",
+    "price": 6,
+    "tags": [
+      "bordado",
+      "oficial"
+    ],
+    "supplier": {
+      "name": "Bordados do Norte",
+      "country": "PT"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Livro \"120 anos de Bombeiros\"",
+    "category": "livros",
+    "price": 22,
+    "tags": [
+      "historia",
+      "oferta"
+    ],
+    "supplier": {
+      "name": "Edições Valadares",
+      "country": "PT"
+    }
+  }
+]

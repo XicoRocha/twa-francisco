@@ -1,0 +1,18 @@
+{
+  "name": "twa-ficha08",
+  "version": "1.0.0",
+  "description": "TWA · Ficha 08 — API REST do catálogo com Express",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "node --watch src/app.js",
+    "start": "node src/app.js",
+    "check": "node check.mjs"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  }
+}
